@@ -10,7 +10,7 @@ public class TheStack : MonoBehaviour {
 	public Material stackMaterial;
 	public GameObject endPanel;
 
-	private const float BOUND_SIZE = 3.5f;
+	private const float BOUND_SIZE = 3.0f;
 	private const float STACK_MOVING_SPEED = 5.0f;
 	private const float ERROR_MARGIN = 0.1f;
 
@@ -50,7 +50,7 @@ public class TheStack : MonoBehaviour {
 			if (PlaceIt ()) {
 				SpawnTile ();
 				scoreCount++;
-//				scoreText.text = scoreCount.ToString ();
+  				scoreText.text = scoreCount.ToString ();
 			} else {
 				EndGame ();
 			}
