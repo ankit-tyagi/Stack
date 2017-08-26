@@ -50,7 +50,7 @@ public class TheStack : MonoBehaviour {
 			if (PlaceIt ()) {
 				SpawnTile ();
 				scoreCount++;
-  				scoreText.text = scoreCount.ToString ();
+				scoreText.text = scoreCount.ToString ();
 			} else {
 				EndGame ();
 			}
