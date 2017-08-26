@@ -10,7 +10,7 @@ public class Stack : MonoBehaviour {
 	public Material stackMaterial;
 	public GameObject endPanel;
 
-	private const float BOUND_SIZE = 3f;
+	private const float BOUND_SIZE = 3.5f;
 	private const float STACK_MOVING_SPEED = 5.0f;
 	private const float ERROR_MARGIN = 0.1f;
 
@@ -22,7 +22,7 @@ public class Stack : MonoBehaviour {
 	private int combo = 0;
 
 	private float tileTransition = 0.0f;
-	private float tileSpeed = 1.5f;
+	private float tileSpeed = 2.5f;
 	private float secondaryPosition;
 
 	private Vector3 desiredPosition;
@@ -34,6 +34,7 @@ public class Stack : MonoBehaviour {
 	private void Start () {
 		theStack = new GameObject[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++) {
+			
 			theStack [i] = transform.GetChild (i).gameObject; 
 			ColorMesh (theStack [i].GetComponent<MeshFilter> ().mesh);
 		}
